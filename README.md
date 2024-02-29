@@ -38,12 +38,25 @@ To get started, follow these steps:
    npm run start
    ```
 
-2. **Link demo services**
+3. **Link demo services**
 
    You can link demo services by running:
    ```bash
    API_KEY="<service_management_api_key>" NRN="<application_nrn>" ENVIRONMENT="production" node link-services.js
    ```
+
+4. **Fetch weather data**
+
+   You can fetch weather data by opening this url in your browser:
+   ```http request
+   <your_scope_domain>/weather?query=<city,state,country>&cache=true
+   ```
+   for example:
+   
+   ```http request
+   <your_scope_domain>/weather?query=madrid
+   ```
+
 
 ---
 
