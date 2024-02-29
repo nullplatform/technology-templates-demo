@@ -22,14 +22,14 @@ fastify.get('/health', async (request, reply) => {
 fastify.get('/weather', async (request, reply) => {
     const { query, cache } = request.query;
     const data = await getWeatherForSearch(query, cache);
-    return reply.view('/templates/weather.ejs', data);
+    return reply.view('weather.ejs', data);
 });
 
 const getWeatherForSearch = async (query, cache) => {
     const date = new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
     const foundCities = await fetchCity(query);
     if (!foundCities || foundCities.length === 0) {
-        return reply.view('/templates/weather.ejs', { date, temp: null, city: null, icon: null });
+        return { date, temp: null, city: null, icon: null };
     }
     const { name: city, lat, lon } = foundCities[0];
     if (cache) {

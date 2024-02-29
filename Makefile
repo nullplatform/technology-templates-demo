@@ -50,7 +50,7 @@ test-lambda:
 	npm --prefix $(ASSET_WORKING_DIRECTORY) run test
 compile-lambda:
 	cp $(ASSET_WORKING_DIRECTORY)/*.js $(ASSET_OUTPUT_DIRECTORY)
-	cp -r $(ASSET_WORKING_DIRECTORY)/templates/* $(ASSET_OUTPUT_DIRECTORY)/templates
+	cp $(ASSET_WORKING_DIRECTORY)/*.ejs $(ASSET_OUTPUT_DIRECTORY)
 package-lambda:
 	cd $(ASSET_OUTPUT_DIRECTORY) && zip -r $(ASSET_FILE) .
 push-lambda:
