@@ -8,7 +8,7 @@
     <br>
 </h2>
 
-Welcome to the **Technology Template for Node.js** repository! This repository provides an example for building server or serverless applications using Node.js. Whether you're new to nullplatform development or looking to streamline your workflow, this template offer a great starting point.
+Welcome to the **Technology Template for Demo** repository! This repository provides an example for building server or serverless applications using Node.js. Whether you're new to nullplatform development or looking to streamline your workflow, this template offer a great starting point.
 
 ## Table of Contents
 
