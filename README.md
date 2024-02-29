@@ -38,6 +38,13 @@ To get started, follow these steps:
    npm run start
    ```
 
+2. **Link demo services**
+
+   You can link demo services by running:
+   ```bash
+   API_KEY="<service_management_api_key>" NRN="<application_nrn>" ENVIRONMENT="production" node link-services.js
+   ```
+
 ---
 
 Enjoy building applications using this Node.js template! If you have any questions or feedback, please open an issue in the repository. Happy coding!
