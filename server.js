@@ -28,7 +28,7 @@ fastify.get('/weather', async (request, reply) => {
 const getWeatherForSearch = async (query, cache) => {
     const date = new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
     const foundCities = await fetchCity(query);
-    if (foundCities.length === 0) {
+    if (!foundCities || foundCities.length === 0) {
         return reply.view('/templates/weather.ejs', { date, temp: null, city: null, icon: null });
     }
     const { name: city, lat, lon } = foundCities[0];
